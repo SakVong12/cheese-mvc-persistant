@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org/">
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+</head>
+<body>
+
+<h1 th:text="${title}">Default Title</h1>
+
+<form th:object="${user}" method="post">
+    <div>
+        <label th:for="name">User Name</label>
+        <input class="form-control" th:field="*{name}" type="text"  />
+        <span th:errors="*{name}" class="error"></span>
+    </div>
+    <div>
+        <label th:for="email">User Name</label>
+        <input class="form-control" th:field="*{email}" type="text"  />
+        <span th:errors="*{email}" class="error"></span>
+    </div>
+
+    <div>
+        <label th:for="name">User Name</label>
+        <input class="form-control" th:field="*{name}" type="text"  />
+        <span th:errors="*{name}" class="error"></span>
+    </div>
+
+    <input type="submit" value="Add Cheese" />
+</form>
+
+</body>
+</html>
